@@ -17,7 +17,7 @@ pip install .
 Run a single game:
 
 ```bash
-treasure dungeons/example.yml
+treasure examples/dungeon.yml
 ```
 
 Compute outcome probabilities:
