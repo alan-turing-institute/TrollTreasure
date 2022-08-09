@@ -12,7 +12,7 @@ dependencies = [
 ]
 
 [tool.setuptools.packages.find]
-include = ["treasure"]  # package names should match these glob patterns
+include = ["treasure*"]  # only include treasure directory in package
 
 [project.optional-dependencies]
 dev = [
@@ -23,4 +23,4 @@ dev = [
 ]
 
 [project.scripts]
-greet = "treasure.cli:main"
+treasure = "treasure.cli:main"

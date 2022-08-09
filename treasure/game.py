@@ -1,6 +1,11 @@
 import copy
 
-from art import tprint
+from art import text2art, tprint
+
+preamble = f"""{text2art('Troll Treasure', font='small')}
+An adventurer is looking for treasure in a mysterious dungeon.
+Will they succeed or be dinner for the troll that lurks there?
+"""
 
 
 class Game:
@@ -8,13 +13,10 @@ class Game:
         self.dungeon = dungeon
 
     def preamble(self):
-        tprint("Troll Treasure\n", font="small")
         print(
-            f"""
-The {self.dungeon.adventurer.name} is looking for treasure in a mysterious dungeon.
-Will they succeed or be dinner for the {self.dungeon.troll.name} that lurks there?
-
-The map of the dungeon is below:
+            preamble
+            + f"""
+\nThe map of the dungeon is below:
 o : an empty room
 o - o : connected rooms
 {self.dungeon.troll.symbol} : {self.dungeon.troll.name}
